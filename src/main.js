@@ -1,9 +1,9 @@
 import { createApp } from "vue";
-import TicTacToe from "./components/TicTacToe";
-import Cell from "./components/Cell";
+import Board from "./components/Board";
+import Square from "./components/Square";
 
 const app = createApp({
   /* options */
 });
 
-app.component("tic-tac-toe", TicTacToe);
+app.component("tic-tac-toe", Board);
