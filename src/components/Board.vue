@@ -1,8 +1,10 @@
 <template>
-	<div class="class">
+	<h1 v-else>Next Up: {{ playerValue }}</h1>
+	<div class="board">
 		<span class="vertical-line-1"></span>
 		<span class="vertical-line-2"></span>
-		<Square />
+		<Square v-for="(square, i) in board" :key="`square-${i}" :label="`square-${i}" :value="square"
+			@click="markSquare(i)" />
 	</div>
 </template>
 
