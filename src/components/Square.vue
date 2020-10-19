@@ -1,3 +1,21 @@
+import { ref } from 'vue'
+
+setup() {
+const board = ref(Array(9).fill(null));
+const playerValue = ref('X');
+const markSquare = (i) => {
+const boardCopy = board.value.slice();
+boardCopy[i] = playerValue.value;
+board.value = boardCopy;
+playerValue.value === 'X' ? (playerValue.value = 'O') : (playerValue.value = 'X');
+}
+return {
+board,
+playerValue,
+markSquare,
+}
+}
+
 <template>
 	<button class="square" :name="label" :disabled="winner || value">
     {{ value }}
