@@ -1,4 +1,9 @@
-const { createApp } = require('vue');
-import App from "./App.vue";
+import { createApp } from "vue";
+import TicTacToe from "./components/TicTacToe";
+import Cell from "./components/Cell";
 
-createApp(App).mount("#app");
+const app = createApp({
+  /* options */
+});
+
+app.component("tic-tac-toe", TicTacToe);
